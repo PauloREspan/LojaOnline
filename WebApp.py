@@ -70,7 +70,7 @@ if st.session_state.get("autenticado", False):
         produtos = [
             {"nome": "Cabaz orgânico", "preco": 12, "img": "Horta.jpg"},
             {"nome": "Repolho", "preco": 1, "img": "Repolho.jpg"},
-            {"nome": "Fallafel", "preco": 3, "img": "Fallafel.jpg"}
+            {"nome": "Fallafel", "preco": 3, "img": "Falafel.jpg"}
         ]
 
         if "carrinho" not in st.session_state:
