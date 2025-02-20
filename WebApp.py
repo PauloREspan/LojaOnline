@@ -23,6 +23,17 @@ def verificar_login(user, senha):
             if row == [user, senha]:
                 return True
     return False
+import streamlit as st
+import streamlit.components.v1 as components
+
+# Exemplo de mapa Google com o link que você forneceu
+def mapa_google():
+    google_maps_url = "https://g.co/kgs/RQBM66S"
+    html_code = f"""
+    <iframe src="{google_maps_url}" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    """
+    components.html(html_code, height=450)
+
 
 # Interface do Streamlit
 st.sidebar.title("Login")
@@ -50,7 +61,9 @@ if st.session_state.get("autenticado", False):
 
     with tabs[0]:
         st.title("Rota Verde")
-        st.image("mapa.jpeg")
+        # Display do mapa
+        mapa_google()
+
 
     with tabs[1]:
         st.title("Loja Online")
