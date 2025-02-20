@@ -1,4 +1,5 @@
-import streamlit as st 
+import streamlit as st
+import streamlit.components.v1 as components
 import csv
 import os
 
@@ -23,8 +24,7 @@ def verificar_login(user, senha):
             if row == [user, senha]:
                 return True
     return False
-import streamlit as st
-import streamlit.components.v1 as components
+
 
 # Exemplo de mapa Google com o link que você forneceu
 def mapa_google():
